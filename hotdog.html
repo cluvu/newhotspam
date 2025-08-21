@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HOTDOG SPAM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffbe6;
+      text-align: center;
+      padding: 50px;
+    }
+    .hotdog {
+      font-size: 40px;
+      color: red;
+      margin: 10px;
+      animation: pop 0.5s ease;
+    }
+    @keyframes pop {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🌭 HOTDOG PAGE 🌭</h1>
+  <div id="spam"></div>
+
+  <script>
+    let spam = document.getElementById("spam");
+    setInterval(() => {
+      let p = document.createElement("p");
+      p.textContent = "HOTDOG";
+      p.className = "hotdog";
+      spam.appendChild(p);
+    }, 1000); // every 1 second
+  </script>
+</body>
+</html>
